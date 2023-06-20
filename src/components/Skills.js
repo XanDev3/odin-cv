@@ -56,14 +56,33 @@ class Skills extends Component {
       ],
       skill: '',
       edit: false,
-      showX: false,
+      showX: false
     }
   }
-  
+
   toggleEdit = () => {
     this.setState(prevState => ({
-      edit: !prevState.edit
+      edit: !prevState.edit,
+      showX: false,
     }))
+  }
+
+  handleSkillChange = e => {
+    this.setState({
+      skill: e.target.value
+    })
+  }
+
+  onSkillSubmit = e => {
+    e.preventDefault()
+    this.setState({
+      skills: this.state.skills.concat({
+        id: uniqid(),
+        skill: this.state.skill
+      }),
+      skill: ''
+    })
+    this.toggleEdit()
   }
 
   handleRemoval = id => {
@@ -77,37 +96,54 @@ class Skills extends Component {
     return (
       <div id='Skills'>
         <h2>Skills</h2>
-        <button
-          className="edit-toggle"
-          type="button"
-          onClick={this.toggleEdit}
-        >
+        {edit && 
+          /* todo edit function to pop out form and inputs */
+          <form
+            id='skill-add'
+            className='edit-form'
+            onSubmit={this.onSkillSubmit}
+          >
+            <label htmlFor='skill'>Skill</label>
+            <input
+              id='skill-input'
+              type='text'
+              value={skill}
+              onChange={this.handleSkillChange}
+            />
+            <div className="btn-div">
+              <button type='submit' className="add-btn">Add Skill</button>
+              <button type='button' className="close-btn" onClick={this.toggleEdit}>
+                Close
+              </button>
+            </div>    
+          </form>
+        }
+        <button className='edit-toggle' type='button' onClick={this.toggleEdit}>
           Add
         </button>
-        <ul className="skills-ul">
+        <ul className='skills-ul'>
           {skills.map(skill => {
             return (
-              <li 
-                className="skill-li"
+              <li
+                className='skill-li'
                 key={skill.id}
-                onMouseEnter={() => this.setState({showX:true})}
-                onMouseLeave={() => this.setState({showX:false})}
+                onMouseEnter={() => this.setState({ showX: true })}
+                onMouseLeave={() => this.setState({ showX: false })}
               >
                 {showX && (
-                  <div className='x-div' >
+                  <div className='x-div'>
                     <FontAwesomeIcon
                       className='x-mark'
                       icon={icon({ name: 'xmark', style: 'solid' })}
                       onClick={() => this.handleRemoval(skill.id)}
                     />
                   </div>
-                )}          
+                )}
                 <div className='skill-text'>{skill.skill}</div>
               </li>
             )
           })}
         </ul>
-          {/* todo edit function to pop out form and inputs */}
       </div>
     )
   }
