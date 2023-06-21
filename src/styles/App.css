@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@100;400;500;600&family=Josefin+Sans:ital,wght@0,200;0,300;0,400;1,200;1,400&family=Mochiy+Pop+One&family=Permanent+Marker&family=Quantico&family=Roboto+Serif:ital,wght@1,300&family=Roboto:ital,wght@0,100;0,500;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@100;400;500;600&family=Josefin+Sans:ital,wght@0,200;0,300;0,400;1,200;1,400&family=Mochiy+Pop+One&family=Permanent+Marker&family=Quantico&family=Roboto+Serif:ital,wght@1,300;1,500;1,600&family=Roboto:ital,wght@0,100;0,500;0,700;1,100&display=swap');
 /* Colors */
 :root {
   --white:rgb(254, 254, 254);
@@ -11,6 +11,7 @@
   --light-blue: rgb(75, 156, 226);
   --light-aqua: #00E6AA;
   --medium-aqua: rgb(18, 148, 94);
+  --grey:#666666;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -266,6 +267,7 @@ ol, ul {
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
+
 #Resume #Aside #Info .edit-form {
   top: 300px;
   left: 0;
@@ -278,8 +280,9 @@ ol, ul {
 }
 #Resume #Aside #Info:hover .edit-toggle {
   display: block;
+  left: -18px;
 }
-
+/*Skills styling */
 #Resume #Aside #Skills {
   text-align: center;
   position: relative;
@@ -288,11 +291,28 @@ ol, ul {
   color: var(--white);
   border-color: var(--white);
 }
-#Skills ul li {
-margin-left: 12px;
+#Resume #Aside #Skills ul li{
+  margin-left:4px;
+}
+#Resume #Aside #Skills:hover ul{
+  margin-top: -31px;
 }
 #Resume #Aside #Skills ul:hover li{
-  margin-left: -8px;
+  padding-top: -24px;
+  margin-left:0;
+}
+#Resume #Aside #Skills .x-mark{
+  border: none;
+  margin-left:-30px;
+  margin-right: -12px;
+}
+#Resume #Aside #Skills .x-div{
+  border: none;
+  margin-bottom: -8px;
+  padding-bottom: -8px;
+}
+#Skills ul li {
+  padding-left: 12px;
 }
 .add-btn, .close-btn{
   display: inline;
@@ -305,14 +325,13 @@ margin-left: 12px;
 }
 #Resume #Aside #Skills .edit-toggle {
   display: none;
-  top: 60px;
-  left: 0;
+
 }
 #Resume #Aside #Skills:hover .edit-toggle {
   display: block;
   position: relative;
-  top: -8px;
-  left: 0px;
+  top: -54px;
+  left: -18px;
 }
 /*Introduction section styling*/
 #Resume main #Intro {
@@ -321,7 +340,7 @@ margin-left: 12px;
   position: relative;
 }
 #Resume main #Intro h1{
-  margin-bottom:-8px;
+  margin-bottom:-4px;
 }
 #Resume main #Intro .title {
   font-size: 20px;
@@ -331,7 +350,7 @@ margin-left: 12px;
 }
 #Resume main #Intro h2 {
   border: none;
-  padding: 0;
+  padding: 2px 0;
   margin-bottom: 5px;
 }
 #Resume main #Intro .profile {
@@ -358,12 +377,12 @@ margin-left: 12px;
 }
 #Resume main #Education > div {
   display: grid;
-  grid-template-columns:6fr 6fr 1fr;
+  grid-template-columns:6fr 9fr 1fr;
   grid-column-gap: 40px;
+  padding-bottom: 16px;
 }
-
-#Resume main #Education #edu-info > div:not(:last-child) {
-  padding-bottom: 20px;
+#Resume main #Education > div:last-child {
+  margin-bottom: 20px;
 }
 #Resume main #Education .education-date {
   text-transform: uppercase;
@@ -379,12 +398,16 @@ margin-left: 12px;
 }
 #Resume main #Education .education-school {
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
 }
 #Resume main #Education .education-location {
-  color: #666666;
+  color: var(--grey);
   font-style: italic;
+  font-size:15px;
+}
+#Resume main #Education .education-minor, .education-gpa{
+  font-size:14px;
 }
 #Resume main #Education .edit-toggle {
   display: none;
@@ -392,6 +415,53 @@ margin-left: 12px;
   right: 8px;
 }
 #Resume main #Education:hover .edit-toggle {
+  display: block;
+}
+/* Experience Section styling */
+#Resume main #Experience {
+  position: relative;
+  min-height: 100px;
+}
+#Resume main #Experience > div {
+  display: grid;
+  grid-template-columns:6fr 9fr 1fr;
+  grid-column-gap: 40px;
+  padding-bottom: 16px;
+}
+
+#Resume main #Experience .experience-date {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 5px;
+  text-align: right;
+}
+#Resume main #Experience .experience-jobTitle {
+  font-weight: 700;
+  color: #456B53;
+  font-size: 18px;
+  text-align: right;
+}
+#Resume main #Experience .experience-description{
+  font-weight: 700;
+  font-size: 14px;
+
+}
+#Resume main #Experience .experience-company {
+  font-style: italic;
+  font-family: 'Roboto Serif';
+  font-weight: 600;
+  font-size: 20px;
+}
+#Resume main #Experience .experience-location {
+  color: var(--grey);
+  font-style: italic;
+}
+#Resume main #Experience .edit-toggle {
+  display: none;
+  top: 8px;
+  right: 8px;
+}
+#Resume main #Experience:hover .edit-toggle {
   display: block;
 }
 /* Edit form styling */

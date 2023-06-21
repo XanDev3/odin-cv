@@ -23,9 +23,10 @@ class Instructions extends Component {
                         <div className="container">
                             <h2>Instructions</h2>
                             <ul>
-                                <li>Hover over the areas of the resume to find Edit and Add buttons</li>
-                                <li>Edit your information in the form fields and submit your edits</li>
-                                <li>Add your Education and Experience or click on entries to remove them</li>
+                                <li>Hover over the areas of the Resume to find Edit, Add, and Remove buttons</li>
+                                <li>Edit your information in the form fields in the upper left and submit your edits</li>
+                                <li>Add your Skills, Education, and Experience </li>
+                                <li>Click on X buttons to remove any of those items</li>
                                 {/* <li>When your done editing, use <code>CTRL</code> + <code>P</code> (<code>CMND</code> + <code>P</code> on a Mac) to print your resume to pdf</li> */}
                             </ul>
 

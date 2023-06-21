@@ -102,7 +102,7 @@ class Info extends Component {
         <div className='online'>
           <h2>Website</h2>
           <p>{website ? website : 'website.com'}</p>
-          <p>{linkedin ? linkedin : 'linkedin.com/in/user-name'}</p>
+          <p>{linkedin ? linkedin : 'linkedin.com/in/name'}</p>
         </div>
         {edit && 
           /* todo edit function to pop out form and inputs */

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Aside from './Aside.js'
 import Intro from './Intro.js'
 import Education from './Education.js'
+import Experience from './Experience.js'
 class Resume extends Component {
     render(){
         return(
@@ -10,7 +11,7 @@ class Resume extends Component {
                 <main>
                     <Intro></Intro>
                     <Education></Education>
-                    <div>Experience</div>
+                    <Experience></Experience>
                 </main>
                 
             </div>

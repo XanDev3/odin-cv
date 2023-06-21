@@ -85,7 +85,14 @@ class Education extends Component {
                 location:this.state.location,
                 minor:this.state.minor,
                 gpa:this.state.gpa,
-            })
+            }),
+            school:'',
+            degree:'',
+            startDate:'',
+            endDate:'',
+            location:'',
+            minor:'',
+            gpa:'',
         })
         this.toggleEdit()
     }
@@ -190,8 +197,8 @@ class Education extends Component {
                             <div className='right edu-div'>
                                 <p className="education-school">{edu.school}</p>
                                 <p className="education-location">{edu.location}</p>
-                                <p className="education-minor">{edu.minor}</p>
-                                <p className="education-gpa">{edu.gpa}</p>
+                                <p className="education-minor">minor: {edu.minor}</p>
+                                <p className="education-gpa">gpa: {edu.gpa}</p>
                             </div>
                             {showX && (
                                 <div className='x-div'>
