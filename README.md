@@ -1,3 +1,22 @@
+# Resume/CV Project
+
+Creating a small CV application to try out basic React cs from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-cv-application):
+
+[Live Version](http://xandernesta.github.io/odin-cv)
+
+### Technologies
+
+- Vanilla Javascript
+- Jest
+- Babel
+- React
+
+### Tools
+- VS Code
+- GitHub
+- NPM
+- uniqid
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
