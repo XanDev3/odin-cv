@@ -2,7 +2,7 @@
   "name": "odin-cv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://xandernesta.github.io/odin-cv",
+  "homepage": "https://xandev3.github.io/odin-cv",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
@@ -45,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
   }
 }

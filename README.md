@@ -2,7 +2,7 @@
 
 Creating a small CV application to try out basic React cs from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-cv-application):
 
-[Live Version](http://xandernesta.github.io/odin-cv)
+[Live Version](http://xandev3.github.io/odin-cv)
 
 ### Technologies
 
